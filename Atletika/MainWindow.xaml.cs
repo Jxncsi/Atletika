@@ -20,5 +20,15 @@ namespace Atletika
         {
             InitializeComponent();
         }
-    }
+
+		private void Mentes_Click(object sender, RoutedEventArgs e)
+		{
+
+        }
+
+		private void Betoltes_Click(object sender, RoutedEventArgs e)
+		{
+
+		}
+	}
 }
