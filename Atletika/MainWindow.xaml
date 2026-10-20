@@ -46,7 +46,7 @@
 				</StackPanel>
 				<DockPanel LastChildFill="False">
 					<Label Content="Életkor" DockPanel.Dock="Left"/>
-					<TextBlock Margin="5,0" VerticalAlignment="Center" Text="{Binding ElementName=sldEletkor, Path=Value, StringFormat={}{0} év}" DockPanel.Dock="Right"/>
+					<TextBlock x:Name="txtEletkor" Margin="5,0" VerticalAlignment="Center" Text="{Binding ElementName=sldEletkor, Path=Value, StringFormat={}{0} év}" DockPanel.Dock="Right"/>
 				</DockPanel>
 				<Slider x:Name="sldEletkor" TickPlacement="BottomRight" Minimum="18" Maximum="90" Value="18" IsSnapToTickEnabled="True" TickFrequency="1"/>
 				<DockPanel LastChildFill="False">
@@ -62,13 +62,13 @@
 					<TextBox x:Name="txtRajtszam" Height="32" DockPanel.Dock="Right"/>
 				</DockPanel>
 				<TextBlock Text="Üres mező: automatikus kiosztás." Margin="5" FontSize="10"/>
-				<Button x:Name="btnRegisztral" Content="Regisztrál" Height="36" Margin="5" Background="#DDEBFA"/>
+				<Button x:Name="btnRegisztral" Click="btnRegisztral_Click" Content="Regisztrál" Height="36" Margin="5" Background="#DDEBFA"/>
 			</StackPanel>
 		</Border>
 
 		<Border Grid.Row="2" Grid.ColumnSpan="2" BorderBrush="#D4DDE7" BorderThickness="1" CornerRadius="8" Padding="16" Margin="0,8,0,0">
 			<DockPanel LastChildFill="False">
-				<TextBlock DockPanel.Dock="Left" Text="Regisztrált versenyzők:" VerticalAlignment="Center"/>
+				<TextBlock x:Name="txtSzamlalo" DockPanel.Dock="Left" Text="Regisztrált versenyzők: 0" VerticalAlignment="Center"/>
 				<Button x:Name="btnBetoltes" Height="32" Width="210" Click="Betoltes_Click" DockPanel.Dock="Right" Content="FÁJLBÓL BETÖLTÉS" Margin="8,0,0,0" VerticalAlignment="Center"/>
 				<Button x:Name="btnMentes" Height="32" Width="210" Click="Mentes_Click" DockPanel.Dock="Right" Content="FÁJLBA MENTÉS" Margin="0,0,8,0" VerticalAlignment="Center"/>
 			</DockPanel>
